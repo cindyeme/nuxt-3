@@ -2,13 +2,14 @@
   <div>
     <div class="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
       <div v-for="p in products" :key="p.id">
-        <nuxt-link :to="`/products/${p.id}`">{{ p.title }}</nuxt-link>
+        <product-card :product="p" />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+
 definePageMeta({
   layout: "products",
 });

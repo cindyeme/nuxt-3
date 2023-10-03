@@ -1,13 +1,11 @@
 <template>
   <div>
-    <p>
-      {{ product.title }}
-    </p>
-    <p>{{ product.price }}</p>
+   <product-details :product="product" />
   </div>
 </template>
 
 <script setup>
+
 const { id } = useRoute().params;
 const url = `https://fakestoreapi.com/products/${id}`;
 
