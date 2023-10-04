@@ -9,13 +9,17 @@
 </template>
 
 <script setup>
-
 definePageMeta({
   layout: "products",
 });
 
 // fetch the products
 const { data: products } = await useFetch("https://fakestoreapi.com/products");
+
+useHead({
+  title: "Nuxt Whisper | Products",
+  meta: [{ name: "description", content: "List of products" }],
+});
 </script>
 
 <style scoped></style>

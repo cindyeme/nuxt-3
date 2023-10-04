@@ -1,5 +1,9 @@
 <template>
   <div>
+    <Head>
+      <Title>Nuxt Whisper | {{ product.title }}</Title>
+      <Meta name="description" :content="product.description" />
+    </Head>
     <product-details :product="product" />
   </div>
 </template>
@@ -13,7 +17,11 @@ const url = `https://fakestoreapi.com/products/${id}`;
 const { data: product } = await useFetch(url);
 
 if (!product.value) {
-  throw createError({ statusCode: 404, statusMessage: "Product not found", fatal: true });
+  throw createError({
+    statusCode: 404,
+    statusMessage: "Product not found",
+    fatal: true,
+  });
 }
 
 definePageMeta({
