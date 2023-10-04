@@ -11,10 +11,13 @@
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit facilis,
       quia odio ab velit voluptates hic et quae esse sed.
     </p>
+    <div>{{ data }}</div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+const { data } = await useFetch(`/api/route`);
+</script>
 
 <style scoped>
 .h2 {
