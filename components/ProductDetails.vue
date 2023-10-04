@@ -1,11 +1,11 @@
 <template>
   <div class="card">
-    <div class="grid md:grid-cols-2 gap-10">
+    <div class="grid md:grid-cols-2 gap-4 lg:gap-10">
       <div class="p-7">
         <img
           :src="product.image"
           alt="product img"
-          class="mx-auto my-7 thumb"
+          class="mx-auto my-7 max-w-[400px] md:max-w-full lg:max-w-[400px]"
         />
       </div>
       <div class="p-7">
@@ -22,8 +22,4 @@
 const { product } = defineProps(["product"]);
 </script>
 
-<style scoped>
-.thumb {
-  max-width: 400px;
-}
-</style>
+<style scoped></style>
