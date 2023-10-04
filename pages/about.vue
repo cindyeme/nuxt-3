@@ -11,12 +11,12 @@
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit facilis,
       quia odio ab velit voluptates hic et quae esse sed.
     </p>
-    <div>{{ data }}</div>
+    <div class="my-5">{{ data }}</div>
   </div>
 </template>
 
 <script setup>
-const { data } = await useFetch(`/api/route`);
+const { data } = await useFetch(`/api/currency/GBP`);
 </script>
 
 <style scoped>
